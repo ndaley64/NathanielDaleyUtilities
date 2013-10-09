@@ -21,19 +21,19 @@ public class DateUtilities {
         return Calendar.getInstance().getTime();
     }
     
-    public static String getDateAsString(Date d){
+    public static String dateToString(Date d){
         String format = STANDARD_DATE;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
     }
     
-    public static String getDateTimeStandardAsString(Date d){
+    public static String dateToDateTimeStandardAsString(Date d){
         String format = DATE_TIME_STANDARD;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
     }
     
-    public static String getDateTimeMilitaryAsString(Date d){
+    public static String dateToDateTimeMilitaryAsString(Date d){
         String format = DATE_TIME_MILITARY;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
