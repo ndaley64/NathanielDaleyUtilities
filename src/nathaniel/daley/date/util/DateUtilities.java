@@ -27,13 +27,13 @@ public class DateUtilities {
         return sdf.format(d);
     }
     
-    public static String dateToDateTimeStandardAsString(Date d){
+    public static String dateToStandardDateTimeAsString(Date d){
         String format = DATE_TIME_STANDARD;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
     }
     
-    public static String dateToDateTimeMilitaryAsString(Date d){
+    public static String dateToMilitaryDateTimeAsString(Date d){
         String format = DATE_TIME_MILITARY;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
