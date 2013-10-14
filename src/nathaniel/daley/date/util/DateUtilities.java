@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class DateUtilities {
     private static final String STANDARD_DATE = "MM/dd/yyyy";
-    private static final String DATE_TIME_STANDARD = "MM/dd/yyyy hh:mm a";
+    private static final String DATE_TIME_STANDARD = "M/d/yyyy hh:mm a";
     private static final String DATE_TIME_MILITARY = "MM/dd/yyyy kk:mm a";
     
     public static Date now() {
