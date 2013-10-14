@@ -4,6 +4,7 @@
  */
 package nathaniel.daley.date.util;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,15 +28,32 @@ public class DateUtilities {
         return sdf.format(d);
     }
     
-    public static String dateToStandardDateTimeAsString(Date d){
+    public static String dateToDateWithStandardTimeAsString(Date d){
         String format = DATE_TIME_STANDARD;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
     }
     
-    public static String dateToMilitaryDateTimeAsString(Date d){
+    public static String dateToDateWithMilitaryTimeAsString(Date d){
         String format = DATE_TIME_MILITARY;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(d);
+    }
+    
+    public static Date toDate(String date, String format) throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        
+        return sdf.parse(date);
+    }
+    
+    public static void main(String[] args) {
+        DateUtilities utilities = new DateUtilities();
+        String dateString = "10/1/2012 09:58:22 PM";
+        String dateFormat = "M/d/yyyy hh:mm:ss a";
+        try{
+            toDate(dateString, dateFormat);
+        }catch( ParseException pe){
+            System.err.println("String does not match the entered date format.");
+        }
     }
 }
